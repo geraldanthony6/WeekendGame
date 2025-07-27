@@ -64,10 +64,14 @@ public class PlayerBattleManager : MonoBehaviour
 
     public void TakeDamage(float DamageToTake)
     {
-        if (_currentPlayerHealth <= 0.0f)
+        if (_currentPlayerHealth > 0.0f)
         {
             _currentPlayerHealth -= DamageToTake - (10.0f * (_playerData.GetDefense()/50.0f));
             _healthBar.value = _currentPlayerHealth;
+        }
+        else if(_currentPlayerHealth <= 0.0f)
+        {
+            BattleManager.Instance.m_PlayerDefeatedEnding.Invoke();
         }
     }
 
@@ -106,7 +110,7 @@ public class PlayerBattleManager : MonoBehaviour
                     BattleManager.Instance.m_EndPlayerTurn.Invoke();
                 break;
                 case 2:
-                    DealDamageToEnemy(5.0f * ((10.0f) * _playerData.GetStrength()/50));
+                    DealDamageToEnemy(5.0f + ((10.0f) * _playerData.GetStrength()/50));
                     BattleManager.Instance.m_EndPlayerTurn.Invoke();
                 break;    
                 case 3:
