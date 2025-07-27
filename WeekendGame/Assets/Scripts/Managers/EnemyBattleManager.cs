@@ -57,7 +57,7 @@ public class EnemyBattleManager : MonoBehaviour
 
     private void DealDamageToPlayer(float DamageToDeal)
     {
-        BattleManager.Instance.GetPlayerBattleManager().TakeDamage(DamageToDeal);
+        BattleManager.Instance.GetPlayerBattleManager().TakeDamage(DamageToDeal - (_enemy.GetEnemyData().GetDefense()));
     }
 
     IEnumerator EnemyPunch()
@@ -66,7 +66,7 @@ public class EnemyBattleManager : MonoBehaviour
         BattleManager.Instance.ToggleActionPanel(_enemy.GetEnemyData().EnemyName, _enemy.GetEnemyData().MoveOneName, true);
         yield return new WaitForSeconds(2.0f);
         BattleManager.Instance.ToggleActionPanel(null, null, false);
-        DealDamageToPlayer(10.0f);
+        DealDamageToPlayer(10.0f * ((10.0f) * (_enemy.GetEnemyData().GetStrength()/50)));
         Debug.Log("Punch Player");
         BattleManager.Instance.m_EndEnemyTurn.Invoke();
     }
@@ -77,7 +77,7 @@ public class EnemyBattleManager : MonoBehaviour
         BattleManager.Instance.ToggleActionPanel(_enemy.GetEnemyData().EnemyName, _enemy.GetEnemyData().MoveTwoName, true);
         yield return new WaitForSeconds(2.0f);
         BattleManager.Instance.ToggleActionPanel(null, null, false);
-        DealDamageToPlayer(10.0f);
+        DealDamageToPlayer(10.0f * ((10.0f) * (_enemy.GetEnemyData().GetStrength()/50)));
         Debug.Log("Kick Player");
         BattleManager.Instance.m_EndEnemyTurn.Invoke();
     }

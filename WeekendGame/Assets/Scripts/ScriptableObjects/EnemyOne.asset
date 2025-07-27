@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: EnemyOne
   m_EditorClassIdentifier: 
   _maxEnemyHealth: 100
+  _strength: 10
+  _defense: 10
+  _luck: 0
   EnemyName: Uno
   MoveOneName: PunchUno
   MoveTwoName: KickUno

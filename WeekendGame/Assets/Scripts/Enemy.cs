@@ -36,8 +36,11 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float DamageToTake)
     {
-        _currentEnemyHealth -= DamageToTake;
-        _enemyHealthBar.value = _currentEnemyHealth;
+        if (_currentEnemyHealth <= 0.0f)
+        {
+            _currentEnemyHealth -= DamageToTake  - (10.0f * (_enemyData.GetDefense()/50.0f));
+            _enemyHealthBar.value = _currentEnemyHealth;
+        }
     }
 
     public void HealEnemy(float AmountToHeal)

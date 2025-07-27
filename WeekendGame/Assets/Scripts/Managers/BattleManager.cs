@@ -27,7 +27,10 @@ public class BattleManager : MonoBehaviour
     public UnityEvent m_EndPlayerTurn;
     
     public UnityEvent m_StartEnemyTurn;
-    public UnityEvent m_EndEnemyTurn; 
+    public UnityEvent m_EndEnemyTurn;
+
+    public UnityEvent m_PlayerDefeatedEnding;
+    public UnityEvent m_EnemyDefeatedEnding;
     #endregion
 
     private void Awake()
@@ -48,9 +51,13 @@ public class BattleManager : MonoBehaviour
         m_StartEnemyTurn ??= new UnityEvent();
         m_EndPlayerTurn ??= new UnityEvent();
         m_EndEnemyTurn ??= new UnityEvent();
+        m_PlayerDefeatedEnding ??= new UnityEvent();
+        m_EnemyDefeatedEnding ??= new UnityEvent();
         
         m_EndPlayerTurn.AddListener(SwitchToEnemyTurn);
         m_EndEnemyTurn.AddListener(SwitchToPlayerTurn);
+        m_PlayerDefeatedEnding.AddListener(ExitBattle);
+        m_EnemyDefeatedEnding.AddListener(ExitBattle);
         
         BattleSetup();
     }

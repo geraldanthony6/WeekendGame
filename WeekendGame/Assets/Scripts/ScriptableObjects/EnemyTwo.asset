@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: EnemyTwo
   m_EditorClassIdentifier: 
   _maxEnemyHealth: 100
+  _strength: 12
+  _defense: 5
+  _luck: 3
   EnemyName: Dos
   MoveOneName: PunchDos
   MoveTwoName: KickDos

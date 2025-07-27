@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: EnemyFour
   m_EditorClassIdentifier: 
   _maxEnemyHealth: 100
+  _strength: 5
+  _defense: 5
+  _luck: 10
   EnemyName: Quatro
   MoveOneName: PunchQuatro
   MoveTwoName: KickQuatro

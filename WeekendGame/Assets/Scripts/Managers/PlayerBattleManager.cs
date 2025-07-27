@@ -64,8 +64,11 @@ public class PlayerBattleManager : MonoBehaviour
 
     public void TakeDamage(float DamageToTake)
     {
-        _currentPlayerHealth -= DamageToTake;
-        _healthBar.value = _currentPlayerHealth;
+        if (_currentPlayerHealth <= 0.0f)
+        {
+            _currentPlayerHealth -= DamageToTake - (10.0f * (_playerData.GetDefense()/50.0f));
+            _healthBar.value = _currentPlayerHealth;
+        }
     }
 
     public void ToggleFightPanel(bool ToggleValue)
@@ -99,11 +102,11 @@ public class PlayerBattleManager : MonoBehaviour
             switch (MoveNumberToDo)
             {
                 case 1:
-                    DealDamageToEnemy(10.0f);
+                    DealDamageToEnemy(10.0f + ((10.0f) * _playerData.GetStrength()/50));
                     BattleManager.Instance.m_EndPlayerTurn.Invoke();
                 break;
                 case 2:
-                    DealDamageToEnemy(5.0f);
+                    DealDamageToEnemy(5.0f * ((10.0f) * _playerData.GetStrength()/50));
                     BattleManager.Instance.m_EndPlayerTurn.Invoke();
                 break;    
                 case 3:

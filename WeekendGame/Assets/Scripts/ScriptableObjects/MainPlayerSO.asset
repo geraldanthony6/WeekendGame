@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: MainPlayerSO
   m_EditorClassIdentifier: 
   _maxPlayerHealth: 100
+  _strength: 0
+  _defense: 0
+  _luck: 0
+  _availableUpgradePoints: 30
   MoveOneName: Punch
   MoveTwoName: Kick
   MoveThreeName: Block
