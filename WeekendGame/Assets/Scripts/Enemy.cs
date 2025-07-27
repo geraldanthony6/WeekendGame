@@ -29,6 +29,11 @@ public class Enemy : MonoBehaviour
         _enemyHealthBar.value = _currentEnemyHealth;
     }
 
+    public EnemySO GetEnemyData()
+    {
+        return _enemyData;
+    }
+
     public void TakeDamage(float DamageToTake)
     {
         _currentEnemyHealth -= DamageToTake;

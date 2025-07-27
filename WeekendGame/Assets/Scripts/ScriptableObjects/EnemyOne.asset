@@ -13,3 +13,8 @@ MonoBehaviour:
   m_Name: EnemyOne
   m_EditorClassIdentifier: 
   _maxEnemyHealth: 100
+  EnemyName: Uno
+  MoveOneName: PunchUno
+  MoveTwoName: KickUno
+  MoveThreeName: BlockUno
+  MoveFourName: HealUno

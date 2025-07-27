@@ -4,6 +4,8 @@ using UnityEngine;
 public class EnemySO : ScriptableObject
 {
     [SerializeField]private float _maxEnemyHealth;
+    [SerializeField] private float _strength;
+    [SerializeField] private float _defense;
 
     public string EnemyName;
     public string MoveOneName;

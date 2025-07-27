@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -17,7 +18,9 @@ public class BattleManager : MonoBehaviour
 
     [SerializeField] private Enemy _enemy;
 
-    [SerializeField] private bool _bHasBattleStarted = false;
+    [SerializeField] private GameObject _actionPanel;
+
+    [SerializeField] private TextMeshProUGUI _actionText;
 
     #region Events
     public UnityEvent m_StartPlayerTurn;
@@ -64,7 +67,6 @@ public class BattleManager : MonoBehaviour
         // Should do some sort of stat check here to see who gets first turn
         CurrentTurnState = TurnEnum.PlayerTurn;
         m_StartPlayerTurn.Invoke();
-        _bHasBattleStarted = true;
     }
 
     private void SwitchToEnemyTurn()
@@ -102,6 +104,19 @@ public class BattleManager : MonoBehaviour
     public void SetEnemy(Enemy newEnemy)
     {
         _enemy = newEnemy;
+    }
+
+    public void ToggleActionPanel(string ActionUser, string MoveUsed, bool ToggleValue)
+    {
+        if (ToggleValue)
+        {
+            _actionPanel.SetActive(true);
+            _actionText.text = ActionUser + " uses " + MoveUsed;
+        }
+        else
+        {
+            _actionPanel.SetActive(false);
+        }
     }
 
     public void ExitBattle()

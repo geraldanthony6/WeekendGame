@@ -62,7 +62,10 @@ public class EnemyBattleManager : MonoBehaviour
 
     IEnumerator EnemyPunch()
     {
+        yield return new WaitForSeconds(0.5f);
+        BattleManager.Instance.ToggleActionPanel(_enemy.GetEnemyData().EnemyName, _enemy.GetEnemyData().MoveOneName, true);
         yield return new WaitForSeconds(2.0f);
+        BattleManager.Instance.ToggleActionPanel(null, null, false);
         DealDamageToPlayer(10.0f);
         Debug.Log("Punch Player");
         BattleManager.Instance.m_EndEnemyTurn.Invoke();
@@ -70,7 +73,10 @@ public class EnemyBattleManager : MonoBehaviour
     
     IEnumerator EnemyKick()
     {
+        yield return new WaitForSeconds(0.5f);
+        BattleManager.Instance.ToggleActionPanel(_enemy.GetEnemyData().EnemyName, _enemy.GetEnemyData().MoveTwoName, true);
         yield return new WaitForSeconds(2.0f);
+        BattleManager.Instance.ToggleActionPanel(null, null, false);
         DealDamageToPlayer(10.0f);
         Debug.Log("Kick Player");
         BattleManager.Instance.m_EndEnemyTurn.Invoke();
@@ -78,7 +84,10 @@ public class EnemyBattleManager : MonoBehaviour
     
     IEnumerator EnemyBlock()
     {
+        yield return new WaitForSeconds(0.5f);
+        BattleManager.Instance.ToggleActionPanel(_enemy.GetEnemyData().EnemyName, _enemy.GetEnemyData().MoveThreeName, true);
         yield return new WaitForSeconds(2.0f);
+        BattleManager.Instance.ToggleActionPanel(null, null, false);
         _enemy.HealEnemy(10.0f);
         Debug.Log("Enemy Blocked");
         BattleManager.Instance.m_EndEnemyTurn.Invoke();
@@ -86,7 +95,10 @@ public class EnemyBattleManager : MonoBehaviour
     
     IEnumerator EnemyHeal()
     {
+        yield return new WaitForSeconds(0.5f);
+        BattleManager.Instance.ToggleActionPanel(_enemy.GetEnemyData().EnemyName, _enemy.GetEnemyData().MoveFourName, true);
         yield return new WaitForSeconds(2.0f);
+        BattleManager.Instance.ToggleActionPanel(null, null, false);
         _enemy.HealEnemy(10.0f);
         Debug.Log("Enemy Healed");
         BattleManager.Instance.m_EndEnemyTurn.Invoke();

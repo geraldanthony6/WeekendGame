@@ -25,10 +25,7 @@ public class PlayerBattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T) && BattleManager.Instance.GetCurrentTurnState() == TurnEnum.PlayerTurn)
-        {
-            BattleManager.Instance.m_EndPlayerTurn.Invoke();
-        }
+
     }
 
     private void LoadBasePlayerValues()

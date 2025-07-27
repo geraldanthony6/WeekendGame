@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a40cb29f24eafd4cab379db53292c29, type: 3}
   m_Name: EnemyThree
   m_EditorClassIdentifier: 
-  _maxEnemyHealth: 0
-  EnemyName: 
-  MoveOneName: 
-  MoveTwoName: 
-  MoveThreeName: 
-  MoveFourName: 
+  _maxEnemyHealth: 100
+  EnemyName: Tres
+  MoveOneName: PunchTres
+  MoveTwoName: KickTres
+  MoveThreeName: BlockTres
+  MoveFourName: HealTres
