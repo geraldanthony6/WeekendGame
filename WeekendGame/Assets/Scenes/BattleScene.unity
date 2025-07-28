@@ -1247,7 +1247,7 @@ GameObject:
   - component: {fileID: 872658809}
   - component: {fileID: 872658808}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: Fight Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1266,7 +1266,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 6cace588f2902454f9cdf84847174d1b, type: 3}
   m_Resource: {fileID: 8300000, guid: 6cace588f2902454f9cdf84847174d1b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.709
+  m_Volume: 0.51
   m_Pitch: 1
   Loop: 1
   Mute: 0

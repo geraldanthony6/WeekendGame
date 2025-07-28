@@ -128,6 +128,13 @@ public class BattleManager : MonoBehaviour
 
     public void ExitBattle()
     {
-        SceneManager.LoadScene("BaseRoomScene");
+        if (CurrentTurnState == TurnEnum.PlayerTurn)
+        {
+            SceneManager.LoadScene("DefeatedScene");
+        }
+        else
+        {
+            SceneManager.LoadScene("BaseRoomScene");
+        }
     }
 }
