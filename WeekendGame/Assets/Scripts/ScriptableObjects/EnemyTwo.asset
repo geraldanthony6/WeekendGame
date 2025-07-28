@@ -16,8 +16,8 @@ MonoBehaviour:
   _strength: 12
   _defense: 5
   _luck: 3
-  EnemyName: Dos
-  MoveOneName: PunchDos
-  MoveTwoName: KickDos
-  MoveThreeName: BlockDos
-  MoveFourName: HealDos
+  EnemyName: Vift
+  MoveOneName: Visceral Hit
+  MoveTwoName: Sweeping Strike
+  MoveThreeName: Winged Deflect
+  MoveFourName: Cloaked Regen

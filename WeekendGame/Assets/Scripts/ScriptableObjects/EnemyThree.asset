@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxEnemyHealth: 100
   _strength: 5
-  _defense: 10
+  _defense: 15
   _luck: 5
-  EnemyName: Tres
-  MoveOneName: PunchTres
-  MoveTwoName: KickTres
-  MoveThreeName: BlockTres
-  MoveFourName: HealTres
+  EnemyName: Quator
+  MoveOneName: Semsic Punch
+  MoveTwoName: Sludge Roll
+  MoveThreeName: Great Wall
+  MoveFourName: 7th Wonder

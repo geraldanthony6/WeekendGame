@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: EnemyOne
   m_EditorClassIdentifier: 
   _maxEnemyHealth: 100
-  _strength: 10
-  _defense: 10
+  _strength: 12
+  _defense: 7
   _luck: 0
-  EnemyName: Uno
-  MoveOneName: PunchUno
-  MoveTwoName: KickUno
-  MoveThreeName: BlockUno
-  MoveFourName: HealUno
+  EnemyName: Quilt
+  MoveOneName: Needle Strike
+  MoveTwoName: 'Rattle Thump '
+  MoveThreeName: Head Block
+  MoveFourName: Regeneration

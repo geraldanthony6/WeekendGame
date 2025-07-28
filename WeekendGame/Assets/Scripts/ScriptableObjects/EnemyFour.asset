@@ -16,8 +16,8 @@ MonoBehaviour:
   _strength: 5
   _defense: 5
   _luck: 10
-  EnemyName: Quatro
-  MoveOneName: PunchQuatro
-  MoveTwoName: KickQuatro
-  MoveThreeName: BlockQuatro
-  MoveFourName: HealQuatro
+  EnemyName: Quator
+  MoveOneName: Semsic Punch
+  MoveTwoName: Chin Strike
+  MoveThreeName: Steel Cape
+  MoveFourName: Inward Heal
